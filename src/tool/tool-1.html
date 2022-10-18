@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <!-- head -->
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../../css/tool.css">
+        <link rel="stylesheet" href="../../css/main.css">
+        <script type="text/javascript" src="../../script/main.js"></script>
+        <title>時系列データの解析</title>
+    </head>
+    <!-- body -->
+    <body>
+        <!-- header -->
+        <header>
+            <a class="headline">時系列データの解析 > 時系列データの解析ツール > Time-series checker</a>
+            <div id="humMenu">
+                <input id="humCheck" type="checkbox">
+                <label id="humOpen" for="humCheck"><img src="../../image/menu.png" alt="メニュー" width="50" height="50"></label>
+                <label id="humClose" for="humCheck"></label>
+                <nav>
+                    <ul class="inner">
+                        <li><a href="../../index.html">トップページへ戻る</a>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- タイトルセクション -->
+        <section class="title">
+            <h1 class="title-line">Time-series checker</h1>
+            <p class="summary">
+                <a class="summary-subject"><strong>ツールの説明</strong></a>
+                <br>
+                <a class="summary-content">
+                このツールは特定のディレクトリ内に存在する時系列データを理解する際に役立たせる
+                ことができます。規則性のある番号で保存された時系列データであれば、そのデータを
+                動画のように閲覧することが出来ます。
+                </a>
+            </p>
+        </section>
+        <!-- 濃紺の帯を挿入 -->
+        <p class="blue-band"></p>
+
+        <!-- 設定セクション --->
+        
+        <section>
+            <p class="main-subject"><strong>初期設定</strong></p>
+            <div class="setting">
+                <div class="setting-list">
+                    <a class="setting-item">1. 時系列データの保存されたディレクトリの絶対PATHを入力</a>
+                    <label class="setting-item"><input id="text-1" type="text" size="50"></label>
+                </div>
+                <div class="setting-list">
+                    <a class="setting-item">2. 時系列データのベース名を入力</a>
+                    <a class="setting-item">.~/</a>
+                    <label class="setting-item"><input id="text-2" type="text" size="30"></label>
+                    <a class="setting-item">*</a>
+                    <label class="setting-item"><input id="text-3" type="text" size="30"></label>
+                    <a class="setting-item">(*は時系列データの番号)</a>
+                </div>
+                <div class="setting-list">
+                    <a class="setting-item">3. 時系列データの開始番号を指定</a>
+                    <label class="setting-item"><input id="number-1" type="number" value="0"></label>
+                </div>
+                <div class="setting-list">
+                    <a class="setting-item">4. 時系列データの終了番号を指定</a>
+                    <label class="setting-item"><input id="number-2" type="number" value=""></label>
+                </div>
+                <div class="setting-list">
+                    <a class="setting-item">5. 時系列データの番号間隔を指定</a>
+                    <label class="setting-item"><input id="number-3" type="number" value="1"></label>
+                </div>
+                <div class="setting-list">
+                    <a class="setting-item">6. 設定を適用</a>
+                    <label class="setting-item"><input id="button-1" type="button" value="  PUSH  "
+                    onclick="show_img('img-1', 'text-1', 'text-2', 'text-3', 'number-1', 'number-2', 'number-3',
+                                     'filenam-1', 'step-min', 'step-max', 'step-num', 'number-4', 'range-1')"></label>
+                </div>
+            </div>
+            <div class="setting">
+                <div class="setting-list">
+                    <a class="setting-item">デモデータを実行</a>
+                    <label class="setting-item"><input id="button-2" type="button" value="  PUSH  "
+                    onclick="show_img_demo('img-1', 'text-1', 'text-2', 'text-3', 'number-1', 'number-2', 'number-3',
+                                         'filenam-1', 'step-min', 'step-max', 'step-num', 'number-4', 'range-1')">
+                </div>
+            </div>
+        </section>
+        <!-- 濃紺の帯を挿入 -->
+        <p class="blue-band"></p>
+
+        <!-- 表示セクション --->
+        <section>
+            <p id="filenam-1" class="main-subject"><strong></strong></p>
+            <div class="show-list">
+                <img class="show-img" id="img-1" src="none"></img>
+                <div class="show-condition">
+                    <div class="show-item-list">
+                        <a class="show-item">開始番号</a>
+                        <a class="show-item" id="step-min"></a>
+                    </div>
+                    <div class="show-item-list">
+                        <a class="show-item">終了番号</a>
+                        <a class="show-item" id="step-max"></a>
+                    </div>
+                    <div class="show-item-list">
+                        <a class="show-item">番号間隔</a>
+                        <a class="show-item" id="step-num"></a>
+                    </div>
+                    <div class="show-item-list">
+                        <a class="show-item">時系列データ番号を変更</a>
+                        <label class="show-item"><input type="number" id="number-4" onchange="change_img_number('img-1', 'text-1', 'text-2', 'text-3', 'filenam-1', 'number-4', 'range-1')"></label>
+                        <label class="show-item"><input id="range-1" type="range" onchange="change_img_range('img-1', 'text-1', 'text-2', 'text-3', 'filenam-1', 'number-4', 'range-1')"></label>
+                    </div>
+                <div>
+            </div>
+        </section>
+
+    </body>
+</html>

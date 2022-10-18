@@ -1,0 +1,38 @@
+.setting{
+    background-color: gainsboro;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-bottom: 20px;
+}
+.setting .setting-list{
+    display:flex;
+    flex-wrap: wrap;
+}
+.setting .setting-list .setting-item{
+    margin: 10px;
+    font-size: 15px;
+}
+.show-img{
+    margin-top: 20px;
+    margin-left: 5%;
+    width: 50%;
+}
+.show-list{
+    display:flex;
+    flex-wrap: wrap;
+}
+.show-condition{
+    margin-top: 20px;
+    margin-right: 5%;
+    background-color: gainsboro;
+    margin-left: 5%;
+    width: 35%;
+}
+.show-condition .show-item-list{
+    display:flex;
+    flex-wrap: wrap;
+}
+.show-condition .show-item-list .show-item{
+    margin: 10px;
+}
