@@ -21,6 +21,7 @@
 .show-list{
     display:flex;
     flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 .show-condition{
     margin-top: 20px;

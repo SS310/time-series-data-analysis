@@ -70,7 +70,7 @@ function change_img_range(img, path, base_1, base_2, filenam, number, range){
     var number = document.getElementById(number);
     var range = document.getElementById(range);
 
-    filenam.innerText = base_1.value + number.value + base_2.value;  
+    filenam.innerText = base_1.value + range.value + base_2.value;  
     img.src = path.value + "/" + base_1.value + range.value + base_2.value;
 
     if(range.value == range.max){

@@ -3,30 +3,31 @@
     <!-- head -->
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="../../css/tool.css">
-        <link rel="stylesheet" href="../../css/main.css">
-        <script type="text/javascript" src="../../script/main.js"></script>
+        <link rel="stylesheet" href="main.css">
+        <script type="text/javascript" src="main.js"></script>
         <title>時系列データの解析</title>
     </head>
     <!-- body -->
     <body>
         <!-- header -->
         <header>
-            <a class="headline">時系列データの解析 > 時系列データの解析ツール > Time-series checker</a>
+            <a class="headline">Time-series checker</a>
             <div id="humMenu">
                 <input id="humCheck" type="checkbox">
-                <label id="humOpen" for="humCheck"><img src="../../image/menu.png" alt="メニュー" width="50" height="50"></label>
+                <label id="humOpen" for="humCheck"><img src="./image/menu.png" alt="メニュー" width="50" height="50"></label>
                 <label id="humClose" for="humCheck"></label>
                 <nav>
                     <ul class="inner">
-                        <li><a href="../../index.html">トップページへ戻る</a>
+                        <li><a href="#title">ページ上部へ戻る</a></li>
+                        <li><a href="#setting">初期設定</a></li>
+                        <li><a href="#filenam-1">表示結果</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
 
         <!-- タイトルセクション -->
-        <section class="title">
+        <section id="title" class="title">
             <h1 class="title-line">Time-series checker</h1>
             <p class="summary">
                 <a class="summary-subject"><strong>ツールの説明</strong></a>
@@ -44,7 +45,7 @@
         <!-- 設定セクション --->
         
         <section>
-            <p class="main-subject"><strong>初期設定</strong></p>
+            <p id="setting" class="main-subject"><strong>初期設定</strong></p>
             <div class="setting">
                 <div class="setting-list">
                     <a class="setting-item">1. 時系列データの保存されたディレクトリの絶対PATHを入力</a>
